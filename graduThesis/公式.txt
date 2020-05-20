@@ -1,0 +1,32 @@
+$R_{H}=\frac{V_{H}}{I}=\frac{B}{q \rho_{e}}$
+$R_{H}=R_{O} B+R_{A} M$
+$E=\left(n+\frac{1}{2}\right) \hbar \omega_{c}+\frac{\hbar^{2} k_{z}^{2}}{2 m}$
+$\omega_{c}=\frac{e B}{m}$
+$k_{z}=\frac{2 \pi}{L} n_{z}, \quad n_{z} \quad$ 为查說奖
+$$
+\begin{array}{c}\left|\alpha, t_{0} ; t\right\rangle, \quad\left(t>t_{0}\right) \\ \left|\alpha, t_{0} ; t\right\rangle=\mathscr{U}\end{array}
+$$
+$\left\langle\alpha, t_{0} | \alpha, t_{0}\right\rangle=1 \Rightarrow\left\langle\alpha, t_{0} ; t | \alpha, t_{0} ; t\right\rangle=1$
+$\mathscr{U}^{\dagger}\left(t, t_{0}\right) \mathscr{U}\left(t, t_{0}\right)=1$
+$\mathscr{U}\left(t_{2}, t_{0}\right)=\mathscr{U}\left(t_{2}, t_{1}\right) \mathscr{U}\left(t_{1}, t_{0}\right), \quad\left(t_{2}>t_{1}>t_{0}\right)$
+$\mathscr{U}\left(t_{0}+d t, t_{0}\right)=1-i \Omega d t$
+$\Omega=\frac{H}{\hbar}$
+$\mathscr{U}\left(t+d t, t_{0}\right)=\mathscr{U}(t+d t, t) \mathscr{U}\left(t, t_{0}\right)=\left(1-\frac{i H d t}{\hbar}\right) \mathscr{U}\left(t, t_{0}\right)$
+ih $\frac{\partial}{\partial t} \mathscr{U}\left(t, t_{0}\right)=H \mathscr{U}\left(t, t_{0}\right)$
+$\mathscr{U}\left(t, t_{0}\right)=\exp \left[-\left(\frac{i}{\hbar}\right) \int_{t_{0}}^{t} d t^{\prime} H\left(t^{\prime}\right)\right]$
+$H\left|a^{\prime}\right\rangle=E_{a^{\prime}}\left|a^{\prime}\right\rangle$
+$\sigma_{x y}=\frac{e^{2}}{h} \frac{1}{2 \pi} \int_{0}^{2 \pi} d k_{x} \int_{0}^{2 \pi} d k_{y}\left[\partial_{k_{x}} \mathbf{A}_{y}\left(k_{x}, k_{y}\right)-\partial_{k_{y}} \mathbf{A}_{x}\left(k_{x}, k_{y}\right)\right]$
+$$
+\begin{array}{l}-\frac{e^{2}}{h} \frac{1}{2 \pi} \int_{0}^{2 \pi} d k_{y}\left[\mathbf{A}_{y}\left(2 \pi, k_{y}\right)-\mathbf{A}_{y}\left(0, k_{y}\right)\right] \\ \qquad \begin{array}{l}-\frac{e^{2}}{h} \frac{1}{2 \pi} \int_{0}^{2 \pi} d k_{x}\left[\mathbf{A}_{x}\left(k_{x}, 2 \pi\right)-\mathbf{A}_{x}\left(k_{x}, 0\right)\right] \\ -\partial_{k_{x}} \theta_{x}\left(k_{x}\right)+\mathbf{A}_{x}\left(k_{x}, 0\right)\end{array}\end{array}
+$$
+$\mathbf{A}_{y}\left(2 \pi, k_{y}\right)=-\partial_{k_{y}} \theta_{y}\left(k_{y}\right)+\mathbf{A}_{y}\left(0, k_{y}\right)$
+$\frac{e^{2}}{h} \frac{1}{2 \pi}\left[\theta_{y}(0)-\theta_{y}(2 \pi)+\theta_{x}(2 \pi)-\theta_{x}(0)\right]$
+$\begin{aligned} e^{i \theta_{x}(0)}|u(0,2 \pi)\rangle &=|u(0,0)\rangle \\ e^{i \theta_{x}(2 \pi)}|u(2 \pi, 2 \pi)\rangle &=|u(2 \pi, 0)\rangle \\ e^{i \theta_{y}(0)}|u(2 \pi, 0)\rangle &=|u(0,0)\rangle \\ e^{i \theta_{y}(2 \pi)}|u(2 \pi, 2 \pi)\rangle &=|u(0,2 \pi)\rangle \\|u(0,0)\rangle=e^{i\left[\theta_{x}(0)+\theta_{y}(2 \pi)-\theta_{x}(2 \pi)-\theta_{y}(0)\right]}|u(0,0)\rangle &=\end{aligned}$
+$\begin{array}{c}H=\sum_{n=1}^{N}(t+\delta t) c_{A, n}^{\dagger} c_{B, n}+\sum_{n=1}^{N-1}(t-\delta t) c_{A, n+1}^{\dagger} c_{B, n}+h . c \\ H=\left(\begin{array}{cccccc}0 & t+\delta t & 0 & 0 & 0 & 0 & 0 \\ t+\delta t & 0 & t-\delta t & 0 & 0 & 0 & 0 \\ 0 & t-\delta t & 0 & t+\delta t & 0 & 0 & 0 \\ 0 & 0 & t+\delta t & 0 & t-\delta t & 0 & 0 \\ 0 & 0 & 0 & t-\delta t & 0 & \ddots & 0 \\ 0 & 0 & 0 & 0 & \ddots & 0 & t+\delta t \\ 0 & 0 & 0 & 0 & 0 & t+\delta t & 0\end{array}\right) \\ H=\sum_{k} \psi_{k}^{\dagger}\left[((t+\delta t)+(t-\delta t) \cos k) \sigma_{x}+(t-\delta t) \sin k \sigma_{y}\right] \psi_{k} & (t) \\ -(t-\delta t) \sin k \sigma_{x}+\left(2 \delta t+2(t-\delta t) \sin ^{2} \frac{k}{2}\right) \sigma_{z} \\ (-1)^{v}=\operatorname{sgn}(\delta t) \operatorname{sgn}(t+\delta t) \\ k_{y} x_{k} \\ \left.+\left(m+\cos k_{y}\right) \sigma_{z}\right] c_{k_{y}}(x)=\sum_{k_{y}} H_{1 D}\left(k_{y}\right)\end{array}$
+$\begin{aligned} H=& \sum_{k_{y} x}\left\lfloor c_{k_{y}}^{\dagger}(x) \frac{\sigma_{z}-i \sigma_{x}}{2} c_{k_{y}}(x+1)+\text { H.c. }\right]+\sum_{k_{y} x} c_{k_{y}}^{\dagger}(x)\left[\sin k_{y} \sigma_{y}\right.\\ &\left.+\left(m+\cos k_{y}\right) \sigma_{z}\right] c_{k_{y}}(x) \equiv \sum_{k_{y}} H_{1 \mathrm{D}}\left(k_{y}\right) \end{aligned}$
+$n_{L}\left(E_{g}\right)-n_{R}\left(E_{g}\right)=\sum_{E_{n}<E_{g}} \operatorname{Ch}\left(E_{n}\right)$
+$H=\sum_{j=1}^{N}\left[-t\left(c_{j}^{\dagger} c_{j+1}+c_{j+1}^{\dagger} c_{j}\right)-V \cos \left(2 \pi \frac{p}{q} j+\theta_{0}\right) c_{j}^{\dagger} c_{j}\right]$
+
+$P_{1}=-\frac{e}{2 \pi} \int_{B Z} \operatorname{Tr}[\mathcal{A}]$
+$h^{q}(k, \delta)=\left[\gamma+\lambda \cos \left(k_{x}\right)\right] \Gamma_{4}+\lambda \sin \left(k_{x}\right) \Gamma_{3}+$
+$\left[\gamma+\lambda \cos \left(k_{y}\right)\right] \Gamma_{2}+\lambda \sin \left(k_{y}\right) \Gamma_{1}+\delta \Gamma_{0}$

@@ -1,0 +1,94 @@
+\chapter{拓扑物理基本概念}
+拓扑物理有一个重要的概念——Berry phase，可以从含时薛定谔方程的求解过程中生成。因此本部分首先会简要概括含时薛定谔方程的求解过程，然后引入Berry phase，最后定义与之相关的其他拓扑守恒量。
+\section{含时薛定谔方程的求解}
+通常情况下系统的波函数会随时间演化。因此我们可以给波函数添加时间标签
+\begin{equation}
+  \ket{\alpha, t_0; t}, \qquad (t > t_0)
+\end{equation}
+其中$t_0$是初始时间。系统在初始时间的波函数也可以被简写为$\ket{\alpha, t_0}$，。
+  时间演化算子被定义用来描述某时刻的波函数和另一时刻的关系，即
+  \begin{equation}
+    \ket{\alpha, t_0; t} = \mathscr{U}(t, t_0)\ket{\alpha, t_0}
+    \label{defineEvoOpt}
+  \end{equation}
+时间演化算子应该满足一些约束条件。首先我们希望系统在演化过程中概率是守恒的，即
+  \begin{equation}
+    \braket{\alpha, t_0 | \alpha, t_0} = 1 \Rightarrow \braket{\alpha, t_0; t | \alpha, t_0; t} = 1
+  \end{equation}
+把上式插入(\ref{defineEvoOpt})，可以知道U是酉算子
+\begin{equation}
+  \mathscr{U}^\dagger(t, t_0)  \mathscr{U}(t, t_0) = 1
+\label{EvoTUni}
+\end{equation}
+第二点，$\mathscr{U}$应该可以被切割为不同的时间段
+\begin{equation}
+\mathscr{U}(t_2, t_0) = \mathscr{U}(t_2, t_1) \mathscr{U}(t_1, t_0)
+\label{EvoTSlice}
+\end{equation}
+有这两个约束，我们就可以断定当时间间隔$dt$很小时，$\mathscr{U}$可以被写为
+\begin{equation}
+\mathscr{U}(t + dt, t) = 1 - i \Omega dt
+\end{equation}
+其中$\Omega$是厄米算子。显然这个形式是符合约束(\ref{EvoTUni}) (\ref{EvoTSlice})的。
+$\mathscr{U}$算子的作用是把一个波函数映射到另一个波函数，因此它本身是没有量纲的。
+这就表明$\Omega$具有时间倒数，或者说频率，的量纲。另一方面，含时薛定谔方程的特殊
+之处就是它是哈密顿量含时间因子。换句话说，哈密顿量是推动波函数的量，和时间演化算
+子息息相关。而能量又可以写作$E = \hbar \omega$。因此可以（正确的）猜想
+\begin{equation}
+  \Omega = \frac{H}{\hbar}
+\end{equation}
+总之，$\mathscr{U}$可以写作
+\begin{equation}
+  \mathscr{U}(t + dt, t) = (1 - \frac{iH dt}{\hbar}) \mathscr{U}(t, t_0)
+\end{equation}
+可以得到时间演化算子的薛定谔方程
+\begin{equation}
+  i\hbar\frac{\partial}{\partial t} \mathscr{U}(t, t_0) = H\mathscr{U}(t, t_0)
+\end{equation}
+对于不同类型的$H(t)$，这个方程有不同的解。假如不同时间的$H(t)$可以对易，那么解可以写为
+\begin{equation}
+  \mathscr{U}(t, t_0) = exp[-\frac{i}{\hbar} \int_{t_0}^{t} dt' H(t') ]
+\end{equation}
+如果能得到$H$的一组基
+\begin{equation}
+  H \ket{a, t} = E_a \ket{a, t}
+\end{equation}
+那么单个基的含时间波函数就可以写作
+\begin{equation}
+  \ket{\phi(t)} = exp[-\frac{i}{\hbar} \int_{t_0}^{t} dt' E_a(t') ] \ket{a, t}
+\end{equation}
+
+\section{拓扑不变量}
+
+实际上$H$会比上面所述的情况复杂。例如给体系加入一个会变化方向的磁场，不同时刻的$H$则不对易。但我们仍然可以从上面的解得到灵感来猜测一个通解
+\begin{equation}
+  \ket{\phi(t)} = exp[- i \gamma_a(t) -\frac{i}{\hbar} \int_{t_0}^{t} dt' E_a(t') ] \ket{a, t}
+\end{equation}
+而$\gamma_{a}(t)$是引入的新相位。通常情况下$H$是由运动轨迹简介和时间想联系，因此这里把$E_a(t)$改成$E(\mathbf{R}(t))$。把上式代回到含时薛定谔方程可以得到$\gamma_a(t)$的约束
+\begin{equation}
+  \gamma_a(t) = i \int_{\mathbf{R}(0)}^{\mathbf{R}(t)}{d\mathbf{R}} A_a(\mathbf{R})
+\end{equation}
+$\gamma_a(t)$被称作Berry phase。被积分函数为
+\begin{equation}
+  A_a(\mathbf{R}) = \braket{a, \mathbf{R}(t) | \nabla_{\mathbf{R}} | a, \mathbf{R}(t)}
+\end{equation}
+则为Berry connection. 当例子沿闭合轨道运动（这个常常和周期性边界有关），上式为闭合路径积分，可以用斯托克斯公式重写为
+\begin{equation}
+  \gamma_a = \int_{S}{d\mathbf{S}} \cdot \Omega_a(\mathbf{R})
+\end{equation}
+其中Berry curvature为
+\begin{equation}
+\Omega_a(\mathbf{R}) = \nabla_{\mathbf{R}} \times A_a(\mathbf{R})
+\end{equation}
+其他重要的量也可以用Berry connection表示。例如霍尔电导
+\begin{equation}
+  \sigma_{xy} = \frac{e^2}{h}C_1
+  \label{hallInduc}
+\end{equation}
+$C_1$为chern number
+\begin{equation}
+  C_1 = \frac{1}{2 \pi} \int{d^2k}(\nabla \times \mathbf{A})
+\end{equation}
+如果处理的是晶格系统，Berry connection的波函数就被替换为布洛赫波函数即可。
+
+Chern number是一个基本的拓扑不变量。具有不同的chern number的材料会有不同的拓扑性质。下个部分包含几个低拓扑模型的例子。它们都和chern number的丰富物理内涵有关：1. 离散的霍尔电导； 2. 拓扑相变； 3. 拓扑绝缘体的Edge mode。

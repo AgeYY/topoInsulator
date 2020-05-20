@@ -1,0 +1,32 @@
+% !Mode:: "TeX:UTF-8"
+
+\documentclass[a4paper]{ctexrep}
+\usepackage{scuthesis}
+
+\include{src/basic_info} % ×÷ÕßÐÅÏ¢
+
+\begin{document}
+\zihao{-4}
+
+% Ç°ÑÔ£¨ÕªÒª£©
+\include{src/prologue} 
+
+% ÕýÎÄ£¬ÆäËûÕÂÇë°´ÀàËÆ·½Ê½Ìí¼Ó
+\include{src/ch01}     
+\include{src/ch02}
+\include{src/ch03} 
+\include{src/ch04} 
+\include{src/ch05} 
+\include{src/ch06} 
+
+% ºó¼Ç¡¢ÖÂÐ»
+\include{src/epilogue}
+
+% ²Î¿¼ÎÄÏ×
+\cleardoublepage
+\bibliographystyle{bstutf8}
+\bibliography{ref/refs}
+
+\include{src/thanks}
+
+\end{document}
